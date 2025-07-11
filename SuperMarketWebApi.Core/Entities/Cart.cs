@@ -6,9 +6,9 @@ namespace SuperMarketWebApi.Core.Entities
         public int UserId { get; set; }
         public DateTime? PlacementDate { get; set; }
         
-        
         public CartStatus Status { get; set; }
         public int StatusId { get; set; } 
+        public ICollection<Order> Orders { get; set; }
     }
 }
 
