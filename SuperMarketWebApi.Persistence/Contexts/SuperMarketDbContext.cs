@@ -22,23 +22,18 @@ namespace SuperMarketWebApi.Persistence.Contexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Cart>()
-                .HasKey(c => c.Id);
-
-            builder.Entity<Cart>()
-                .HasOne(c => c.Status)
-                .WithMany(cs => cs.Carts)
-                .HasForeignKey(c => c.StatusId);
-            
-            builder.Entity<Cart>()
-                .HasMany(c => c.Orders)
-                .WithOne(o => o.Cart)
-                .HasForeignKey(o => o.CartId);
+                .HasKey(o => o.Id);
             
             builder.Entity<CartStatus>()
                 .HasKey(cs => cs.Id);
-            
+
             builder.Entity<Order>()
                 .HasKey(o => o.Id);
+
+            builder.Entity<Order>()
+                .HasOne(o => o.Status)
+                .WithMany(os => os.Orders)
+                .HasForeignKey(o => o.Status);
             
             builder.Entity<OrderStatus>()
                 .HasKey(os => os.Id);
