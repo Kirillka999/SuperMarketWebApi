@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMarketWebApi.REST", "SuperMarketWebApi.REST\SuperMarketWebApi.REST.csproj", "{29B39EED-500A-43A9-8540-6A206D0136E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMarketWebApi.Application", "SuperMarketWebApi.Application\SuperMarketWebApi.Application.csproj", "{535C2B7C-795A-4901-9B4A-24C56D90F70B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMarketWebApi.Core", "SuperMarketWebApi.Core\SuperMarketWebApi.Core.csproj", "{8FE2C238-8B2D-46F8-9DFC-518CAC7CF7CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMarketWebApi.Persistence", "SuperMarketWebApi.Persistence\SuperMarketWebApi.Persistence.csproj", "{D6805DD7-2175-493F-8B6F-5CD9F32095EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29B39EED-500A-43A9-8540-6A206D0136E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B39EED-500A-43A9-8540-6A206D0136E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B39EED-500A-43A9-8540-6A206D0136E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B39EED-500A-43A9-8540-6A206D0136E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535C2B7C-795A-4901-9B4A-24C56D90F70B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535C2B7C-795A-4901-9B4A-24C56D90F70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535C2B7C-795A-4901-9B4A-24C56D90F70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535C2B7C-795A-4901-9B4A-24C56D90F70B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE2C238-8B2D-46F8-9DFC-518CAC7CF7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE2C238-8B2D-46F8-9DFC-518CAC7CF7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE2C238-8B2D-46F8-9DFC-518CAC7CF7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE2C238-8B2D-46F8-9DFC-518CAC7CF7CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6805DD7-2175-493F-8B6F-5CD9F32095EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6805DD7-2175-493F-8B6F-5CD9F32095EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6805DD7-2175-493F-8B6F-5CD9F32095EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6805DD7-2175-493F-8B6F-5CD9F32095EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
