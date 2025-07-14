@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using SuperMarketWebApi.Core.Records;
 
 namespace SuperMarketWebApi.Interfaces;

@@ -23,8 +23,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\SuperMarketWebApi.Application\SuperMarketWebApi.Application.csproj" />
-      <ProjectReference Include="..\SuperMarketWebApi.Core\SuperMarketWebApi.Core.csproj" />
-      <ProjectReference Include="..\SuperMarketWebApi.Persistence\SuperMarketWebApi.Persistence.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,17 +1,14 @@
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using SuperMarketWebApi.Interfaces;
 using SuperMarketWebApi.Core.Entities;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using Microsoft.Extensions.Options;
 using SuperMarketWebApi.Core.Exceptions;
 using SuperMarketWebApi.Core.Records;
-using SuperMarketWebApi.Core.Settings;
 
-namespace SuperMarketWebApi.Application.Services;
+namespace SuperMarketWebApi.Services;
 
 public class AuthService : IAuthService
 {
@@ -38,7 +35,7 @@ public class AuthService : IAuthService
             
         if (result.Succeeded)
         {
-            var keyValue = _config.GetSection("SecurityKeys")["SK"];
+            var keyValue = _config.GetSection("SecurityKeys")["SK"]!;
             var secret = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyValue));
             var sign = new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
             

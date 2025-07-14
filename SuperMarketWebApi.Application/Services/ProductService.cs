@@ -1,5 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SuperMarketWebApi.Application.Interfaces;
 using SuperMarketWebApi.Core.Entities;
 using SuperMarketWebApi.Core.Exceptions;
 using SuperMarketWebApi.Core.Records;

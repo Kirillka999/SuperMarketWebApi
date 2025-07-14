@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using SuperMarketWebApi.Core.Entities;
 using SuperMarketWebApi.Core.Records;
 
-namespace SuperMarketWebApi.Controllers;
+namespace SuperMarketWebApi.Application.Interfaces;
 
 public interface ICartService
 {

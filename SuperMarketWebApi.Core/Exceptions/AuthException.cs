@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Diagnostics;
-
 namespace SuperMarketWebApi.Core.Exceptions;
 
 public class AuthException : Exception

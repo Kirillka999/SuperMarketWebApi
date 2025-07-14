@@ -1,12 +1,5 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Mvc;
 using SuperMarketWebApi.Interfaces;
-using SuperMarketWebApi.Application.Services;
-using SuperMarketWebApi.Core.Entities;
 using SuperMarketWebApi.Core.Records;
 
 namespace SuperMarketWebApi.Controllers

@@ -1,6 +1,4 @@
-using System.Reflection;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 using SuperMarketWebApi.Core.Entities;
 using SuperMarketWebApi.Persistence.EntityConfigurations;

@@ -1,11 +1,8 @@
-using System.Runtime.InteropServices.JavaScript;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SuperMarketWebApi.Core.Entities;
+using SuperMarketWebApi.Application.Interfaces;
 using SuperMarketWebApi.Core.Records;
-using SuperMarketWebApi.Persistence.Contexts;
 
 namespace SuperMarketWebApi.Controllers;
 

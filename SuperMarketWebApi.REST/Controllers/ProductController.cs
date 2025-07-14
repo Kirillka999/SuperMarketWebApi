@@ -1,12 +1,7 @@
-using System.Security.Cryptography;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.EntityFrameworkCore;
-using SuperMarketWebApi.Application.Services;
-using SuperMarketWebApi.Core.Entities;
+using SuperMarketWebApi.Application.Interfaces;
 using SuperMarketWebApi.Core.Records;
-using SuperMarketWebApi.Persistence.Contexts;
 
 namespace SuperMarketWebApi.Controllers
 {
@@ -17,7 +12,7 @@ namespace SuperMarketWebApi.Controllers
     {
         private readonly IProductService _productService;
 
-        public ProductController(SuperMarketDbContext context, IProductService productService)
+        public ProductController(IProductService productService)
         {
             _productService = productService;
         }

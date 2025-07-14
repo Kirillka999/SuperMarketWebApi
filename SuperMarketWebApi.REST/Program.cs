@@ -5,11 +5,12 @@ using Microsoft.OpenApi.Models;
 using SuperMarketWebApi.Core.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using SuperMarketWebApi.Application.Interfaces;
 using SuperMarketWebApi.Interfaces;
 using SuperMarketWebApi.Application.Services;
-using SuperMarketWebApi.Controllers;
 using SuperMarketWebApi.ExceptionHandlers;
 using SuperMarketWebApi.Persistence.Contexts;
+using SuperMarketWebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,7 +33,7 @@ builder.Services.AddAuthentication(options =>
             ValidateAudience = false,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Gwrj1fz$RAum1b9Sd$lYNR%R9sefAy$QEdIHkvAg%O8TSM1sv0$nyfwyWDqqTm1"))
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetSection("SecurityKeys")["SK"]!))
         };
     });
 

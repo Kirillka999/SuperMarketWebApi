@@ -1,7 +1,7 @@
 using SuperMarketWebApi.Core.Entities;
 using SuperMarketWebApi.Core.Records;
 
-namespace SuperMarketWebApi.Application.Services;
+namespace SuperMarketWebApi.Application.Interfaces;
 
 public interface IProductService
 {
