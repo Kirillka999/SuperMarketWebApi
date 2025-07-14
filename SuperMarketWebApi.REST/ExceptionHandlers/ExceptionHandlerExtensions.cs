@@ -7,6 +7,7 @@ public static class ExceptionHandlerExtensions
         services.AddExceptionHandler<GetCartExceptionHandler>();
         services.AddExceptionHandler<OrderAddExceptionHandler>();
         services.AddExceptionHandler<OrderPlaceExceptionHandler>();
+        services.AddExceptionHandler<AuthExceptionHandler>();
         services.AddExceptionHandler<UnhandledExceptionHandler>();
         services.AddProblemDetails();
         

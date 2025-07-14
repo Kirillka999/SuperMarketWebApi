@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.Extensions.Options;
+using SuperMarketWebApi.Core.Exceptions;
 using SuperMarketWebApi.Core.Records;
 using SuperMarketWebApi.Core.Settings;
 
@@ -30,7 +31,7 @@ public class AuthService : IAuthService
         var user = await _userManager.FindByEmailAsync(request.Email);
         if (user is null)
         {
-            throw new ArgumentException();
+            throw new AuthException("Can not log in: invalid email");
         }
             
         var result = await _signInManager.PasswordSignInAsync(user, request.Password, false, true);
@@ -62,7 +63,7 @@ public class AuthService : IAuthService
         }
         else
         {
-            throw new ArgumentException();
+            throw new AuthException("Can not log in: invalid password");
         }
     }
     
@@ -84,7 +85,7 @@ public class AuthService : IAuthService
         }
         else
         {
-            throw new ArgumentException();
+            throw new AuthException(string.Join(", ", result.Errors.Select(e => e.Description)));
         }
     }
 }

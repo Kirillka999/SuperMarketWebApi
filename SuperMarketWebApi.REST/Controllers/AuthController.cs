@@ -25,31 +25,15 @@ namespace SuperMarketWebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInRequest request, CancellationToken ct)
         {
-            try
-            {
-                var accessToken = await _authService.SignIn(request, ct);
-
-                return Ok(accessToken);
-            }
-            catch (Exception e)
-            {
-                return Unauthorized(e);
-            }
+            var accessToken = await _authService.SignIn(request, ct);
+            return Ok(accessToken);
         }
         
         [HttpPost]
         public async Task<IActionResult> SignUp(SignUpRequest request, CancellationToken ct)
         {
-            try
-            {
-                await _authService.SignUp(request, ct);
-
-                return NoContent();
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+            await _authService.SignUp(request, ct);
+            return NoContent();
         }
     }
 }
