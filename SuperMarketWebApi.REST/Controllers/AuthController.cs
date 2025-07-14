@@ -1,10 +1,13 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Mvc;
-
-public record SignUpRequest(string Email, string FullName, string Password);
-
-public record SignInRequest(string Email, string Password);
-
-public record SignInResponse(string AccessToken);
+using SuperMarketWebApi.Interfaces;
+using SuperMarketWebApi.Application.Services;
+using SuperMarketWebApi.Core.Entities;
+using SuperMarketWebApi.Core.Records;
 
 namespace SuperMarketWebApi.Controllers
 {
@@ -12,19 +15,42 @@ namespace SuperMarketWebApi.Controllers
     [Route("api/v1/[controller]/[action]")]
     public class AuthController : Controller
     {
-        
+        private readonly IAuthService _authService;
+
+        public AuthController(IAuthService authService)
+        {
+            _authService = authService;
+        }
+
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInRequest request, CancellationToken ct)
-        { 
-            return Ok();
+        {
+            try
+            {
+                var accessToken = await _authService.SignIn(request, ct);
+
+                return Ok(accessToken);
+            }
+            catch (Exception e)
+            {
+                return Unauthorized(e);
+            }
         }
         
         [HttpPost]
         public async Task<IActionResult> SignUp(SignUpRequest request, CancellationToken ct)
         {
-            return Ok();
+            try
+            {
+                await _authService.SignUp(request, ct);
+
+                return NoContent();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
         }
-    
     }
 }
 
