@@ -11,6 +11,7 @@ using SuperMarketWebApi.Persistence.Contexts;
 namespace SuperMarketWebApi.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/v1/Products")]
     public class ProductController : Controller
     {

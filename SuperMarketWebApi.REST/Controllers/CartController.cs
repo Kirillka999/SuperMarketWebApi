@@ -10,7 +10,7 @@ using SuperMarketWebApi.Persistence.Contexts;
 namespace SuperMarketWebApi.Controllers;
 
 [ApiController]
-//[Authorize]
+[Authorize]
 [Route("api/v1/[controller]/[action]")]
 public class CartController : Controller
 {
